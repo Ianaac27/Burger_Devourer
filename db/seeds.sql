@@ -1,6 +1,6 @@
 USE burger_db;
 
-INSERT TO burgers 
+INSERT INTO burgers 
     (burger_name)
 VALUES
     ("Chicken Burger"),
