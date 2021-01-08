@@ -1,29 +1,31 @@
-const { response } = require("express");
 const connection = require("./connection");
 
-module.exports = {
+const orm = {
     
-selectAll() {
-   return connection.query("SELECT * FROM burgers");
+selectAll: function(table) {
+    let queryString = "SELECT * FROM ??";
+    connection.query(queryString, [table], (err, res) => {
+        if (err) throw err;
+        console.log(res);
+    });
 },
 
-insertOne() {
-    return connection.query("INSERT INTO burgers SET ?", 
-        {
-            burger_name: res.burger_name
-        }
-    )
+insertOne: function(table, column, value) {
+    let queryString = "INSERT INTO ?? (??) VALUES (?)";
+    connection.query(queryString, [table,column, value], (err,res) => {
+        if (err) throw err;
+        console.log(res);
+    })
 },
 
-updateOne() {
-    return connection.query("UPDATE burgers SET ? WHERE ?", 
-        [{
-            burger_name: res.burger_name
-        },
-        {
-            id: res.burger_id
-        }]
-    )
-},
+updateOne: function(table, column, value) {
+    let queryString = "UPDATE ?? SET ?? WHERE ?";
+    connection.query(queryString, [table,column,value], (err,res) => {
+        if (err) throw err;
+        console.log(res);
+    })
+
+}
 };
 
+module.exports = orm;
