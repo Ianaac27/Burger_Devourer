@@ -1,0 +1,45 @@
+<iframe src="https://giphy.com/embed/ToMjGplHPoYqSg7oACc" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bleedgfx-burger-ToMjGplHPoYqSg7oACc"></a></p>
+<h1>I only have eyes for burgers and fries</h1>
+
+<h2>On the menu</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+    <li>
+	    {{name}}
+        <button class="devour" data-id="{{id}}" data-newsdevour="{{devour}}">
+		    {{#if devour}}Devour It!{{/if}}
+	    </button>
+    </li>
+      {{!-- {{> burgers/burger-block devoured=true}} --}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h3>In my belly</h3>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{!-- {{> burgers/burger-block devoured=false}} --}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>What's new on the menu?</h2>
+<form class="new-burger">
+
+  <div class="form-info">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="burger" name="name">
+  </div>
+
+  {{!-- <div class="form-info">
+    <label for="sleepy">Sleepy?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div> --}}
+
+  <button type="submit">Add Burger</button>
+</form>
