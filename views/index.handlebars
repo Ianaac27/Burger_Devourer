@@ -3,29 +3,30 @@
 
 <h2>On the menu</h2>
 
-<ul>
+<ol>
   {{#each burgers}}
     {{#unless devoured}}
-    <li>
-	    {{name}}
-        <button class="devour" data-id="{{id}}" data-newsdevour="{{devour}}">
-		    {{#if devour}}Devour It!{{/if}}
+      <li>
+	    {{burger_name}}
+        <button class="devour" data-id="{{id}}" data-newdevour="{{devoured}}">
+		    {{#if devoured}}Devour It!{{/if}}
 	    </button>
     </li>
-      {{!-- {{> burgers/burger-block devoured=true}} --}}
     {{/unless}}
   {{/each}}
-</ul>
+</ol>
 
 <h3>In my belly</h3>
 
-<ul>
+<ol>
   {{#each burgers}}
     {{#if devoured}}
-      {{!-- {{> burgers/burger-block devoured=false}} --}}
+    <li>
+        {{burger_name}}
+    </li>
     {{/if}}
   {{/each}}
-</ul>
+</ol>
 
 <h2>What's new on the menu?</h2>
 <form class="new-burger">
