@@ -12,7 +12,7 @@ selectAll: function(table, cb) {
 
 insertOne: function(table, column, value, cb) {
     let queryString = "INSERT INTO ?? (??) VALUES (?)";
-    connection.query(queryString, [table,column, value], (err,res) => {
+    connection.query(queryString, [table,column,value], (err,res) => {
         if (err) throw err;
         console.log(queryString);
         cb(res);
