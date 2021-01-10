@@ -1,5 +1,5 @@
 $(function() {
-    $(".devour-button").on("click", (e) => {
+    $(".devour-button").on("click", (event) => {
         let id = $(this).data("id");
         let newDevour = $(this).data("newdevour");
 
@@ -19,11 +19,11 @@ $(function() {
     );
     });
 
-    $(".new-burger").on("submit", (e) => {
-        e.preventDefault();
+    $(".new-burger").on("submit", (event) => {
+        event.preventDefault();
 
         var newBurger = {
-          burger_name: $("#burger").val().trim(),
+          name: $("#burger").val().trim(),
         };
     
         console.log(newBurger);
@@ -33,7 +33,7 @@ $(function() {
           type: "POST",
           data: newBurger
         }).then(
-          function() {
+          () => {
             console.log("created new burger");
             //reloads page and updates list
             location.reload();
