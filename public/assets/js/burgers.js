@@ -1,7 +1,9 @@
 $(function() {
-    $(".devour-button").on("click", (event) => {
+    $(".devour-button").on("click", function(event) {
         let id = $(this).data("id");
         let newDevour = $(this).data("newdevour");
+
+console.log(id);
 
         const burgerDevoured = {
             devoured: newDevour
@@ -11,8 +13,8 @@ $(function() {
     $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: burgerDevoured
-    }).then( () => {
-        console.log("Yum, yum, yum, yum, yum.... The " + id + " has been devoured!");
+    }).then( function() {
+        console.log("Yum, yum, yum, yum, yum.... The burger has been devoured!", newDevour);
         //reloads page and updates list
         location.reload();
         }
