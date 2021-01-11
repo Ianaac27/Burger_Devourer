@@ -2,9 +2,6 @@
     --ff-primary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     --ff-secondary: cursive;
 
-    --fw-reg: 300;
-    --fw-bold: 900;
-
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #1bb6e6;
@@ -31,10 +28,24 @@ h2,h3, h4 {
     font-family: var(--ff-primary);
 }
 
+#add-title, .new-burger {
+    text-align: center;
+}
+
 li {
     font-family: var(--ff-secondary);
 }
 
 label, button {
     font-family: var(--ff-primary);
+}
+
+#burger {
+    font-family: var(--ff-secondary);
+    background-color: rgb(191, 191, 3);
+    cursor: url(pencil.png), auto;
+}
+
+#add-burger {
+    margin-top: 1em;
 }
