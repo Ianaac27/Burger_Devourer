@@ -6,6 +6,10 @@ header {
     background-color: var(--clr-primary);
     padding: .5em;
     box-shadow: 10px 0px 13px var(--clr-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 :root {
@@ -14,6 +18,7 @@ header {
 
     --clr-light: rgb(208, 208, 208);
     --clr-dark: #303030;
+    --clr-grey: #858585;
     --clr-primary: rgb(255, 123, 35);
     --clr-accent: #f7f8b9;
 }
@@ -21,8 +26,7 @@ header {
 main {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 2em;
-    margin-top: 1em;
+    background: url(background.jpg);
 }
 
 section {
@@ -42,7 +46,14 @@ img {
 h1 {
     text-align: center;
     font-size: 1.75em;
-    font-family: var(--ff-primary); 
+    -webkit-text-stroke: .25px rgb(251, 236, 72);
+    font-family:'Lily Script One', cursive;; 
+    margin-top: -.5px;
+    color: var(--clr-accent);
+    border: var(--clr-light);
+    border-radius: 1em;
+    border-style: ridge;
+    width: 50%;
 }
 
 h2,h3, h4 {
@@ -59,6 +70,7 @@ label, button {
     font-family: var(--ff-primary);
 }
 
+/* On the Menu section */
 .devour-button {
     margin-block-start: 1em;
     margin-left: 1em;
@@ -86,6 +98,24 @@ li {
     font-size: 1em;
 }
 
+/* In my belly section */
+#belly {
+    background-color: var(--clr-grey);
+    background-size: 20em;
+    background-position: center;
+    padding: 4.5em 2.1em 6em 2em;
+    /* margin-top: -0.5em; */
+    border: var(--clr-dark);
+    border-radius: 1em;
+    border-style: ridge;
+    box-shadow: 5px 5px 16px var(--clr-dark);
+}
+
+#belly-list li {
+    color: white;
+}
+
+/* Footer section section */
 footer {
     background-color: var(--clr-light);
     box-shadow: 0px 2px 13px var(--clr-dark);
@@ -98,7 +128,7 @@ footer {
     background-color: var(--clr-accent);
     cursor: url(pencil.png), auto;
     width: 12.5em;
-    height: 2em;
+    height: 2.5em;
 }
 
 #add-burger {
