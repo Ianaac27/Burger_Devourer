@@ -21,7 +21,7 @@ header {
 main {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     margin-top: 1em;
 }
 
@@ -62,6 +62,7 @@ label, button {
 .devour-button {
     margin-block-start: 1em;
     margin-left: 1em;
+    cursor: url(fork.png), auto;
 }
 
 #menu {
@@ -69,7 +70,8 @@ label, button {
     background-size: 20em;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 2em 2.1em 6em 2em ;
+    padding: 4.5em 2.1em 6em 2em;
+    margin-top: -3em;
 }
 
 #menu-list {
@@ -86,7 +88,6 @@ li {
 
 footer {
     background-color: var(--clr-light);
-    /* padding-top: 1em; */
     box-shadow: 0px 2px 13px var(--clr-dark);
     padding-bottom: 4em;
     padding-top: .5px;

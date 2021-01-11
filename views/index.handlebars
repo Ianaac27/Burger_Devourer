@@ -21,15 +21,19 @@
 
 <aside>
   <h3>In my belly</h3>
-    <ol>
-      {{#each burgers}}
-        {{#if devoured}}
-        <li>
-            {{burger_name}}
-        </li>
-        {{/if}}
-      {{/each}}
-    </ol>
+  <div id="belly">
+      <div id="belly-list">
+        <ol>
+          {{#each burgers}}
+            {{#if devoured}}
+            <li>
+                {{burger_name}}
+            </li>
+            {{/if}}
+          {{/each}}
+        </ol>
+     </div>
+    </div>
   </aside>
 </main>
 
