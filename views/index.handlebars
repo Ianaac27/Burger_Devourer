@@ -6,10 +6,11 @@
 <ol>
   {{#each burgers}}
     {{#unless devoured}}
-      <li>
+      {{!-- <li>
 	    {{burger_name}}
-        <button class="devour-button" data-id="{{id}}" data-newdevour="{{devoured}}">Devour It!</button>
-    </li>
+        <button class="devour-button" data-id="{{id}}" data-newdevour="{{devour}}">Devour It!</button>
+    </li> --}}
+    {{> burgers/devour_button devour=true}}
     {{/unless}}
   {{/each}}
 </ol>

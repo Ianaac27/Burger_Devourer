@@ -1,14 +1,15 @@
 $(function() {
     $(".devour-button").on("click", function(event) {
         let id = $(this).data("id");
-        let newDevour = $(this).data("newdevour");
+        var newDevour = $(this).data("newdevour");
 
 console.log(id);
 
-        const burgerDevoured = {
+        var burgerDevoured = {
             devoured: newDevour
-        };
-    
+        }; 
+
+        console.log(newDevour);
     // Send the PUT req to update mysql table
     $.ajax("/api/burgers/" + id, {
         type: "PUT",
