@@ -1,4 +1,4 @@
-{{!-- <iframe src="https://giphy.com/embed/ToMjGplHPoYqSg7oACc" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/bleedgfx-burger-ToMjGplHPoYqSg7oACc"></a></p> --}}
+<img src="https://media.giphy.com/media/ToMjGplHPoYqSg7oACc/giphy.gif" alt="burger" width="480" height="480">
 <h1>I only have eyes for burgers and fries</h1>
 
 <h2>On the menu</h2>
@@ -6,11 +6,7 @@
 <ol>
   {{#each burgers}}
     {{#unless devoured}}
-      {{!-- <li>
-	    {{burger_name}}
-        <button class="devour-button" data-id="{{id}}" data-newdevour="{{devour}}">Devour It!</button>
-    </li> --}}
-    {{> burgers/devour_button devour=true}}
+      {{> burgers/devour_button devour=true}}
     {{/unless}}
   {{/each}}
 </ol>
