@@ -1,7 +1,7 @@
 $(function() {
     $(".devour-button").on("click", function(event) {
         let id = $(this).data("id");
-        var newDevour = $(this).data("newdevour");
+        let newDevour = $(this).data("newdevour");
 
 console.log(id);
 
