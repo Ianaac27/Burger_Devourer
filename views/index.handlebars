@@ -1,27 +1,35 @@
 <img src="https://media.giphy.com/media/ToMjGplHPoYqSg7oACc/giphy.gif" alt="burger" width="200" height="200">
 <h1>I only have eyes for burgers and fries</h1>
 
-<h2>On the menu</h2>
+<main>
+  <section>
+    <h2>On the menu</h2>
+    <div id="menu">
+      <div id="menu-list">
+      <ol>
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/devour_button devour=true}}
+          {{/unless}}
+        {{/each}}
+      </ol>
+      </div>
+    </div> 
+  </section>
 
-<ol>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/devour_button devour=true}}
-    {{/unless}}
-  {{/each}}
-</ol>
-
-<h3>In my belly</h3>
-
-<ol>
-  {{#each burgers}}
-    {{#if devoured}}
-    <li>
-        {{burger_name}}
-    </li>
-    {{/if}}
-  {{/each}}
-</ol>
+<aside>
+  <h3>In my belly</h3>
+    <ol>
+      {{#each burgers}}
+        {{#if devoured}}
+        <li>
+            {{burger_name}}
+        </li>
+        {{/if}}
+      {{/each}}
+    </ol>
+  </aside>
+</main>
 
 <h4 id="add-title">What's new on the menu?</h4>
 <form class="new-burger">
@@ -32,4 +40,5 @@
   </div>
 
   <button id="add-burger" type="submit">Add Burger</button>
+  <audio id="audio" src="http://dev.interactive-creation-works.net/1/1.ogg"></audio>
 </form>

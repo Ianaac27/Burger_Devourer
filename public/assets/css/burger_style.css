@@ -4,17 +4,27 @@
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #1bb6e6;
-    --clr-accent-two: #040d27;
-    --clr-silver: #bdbcbc;
-  
+    --clr-primary: rgb(231, 90, 8);
+    --clr-accent: #f7f8b9;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section {
+    margin-right: 3em;
+}
+
+aside {
+    margin-right: 3em;
 }
 
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* width: 50%; */
 }
 
 h1 {
@@ -26,24 +36,48 @@ h1 {
 h2,h3, h4 {
     font-size: 1.5em;
     font-family: var(--ff-primary);
+    text-align: center;
 }
 
 #add-title, .new-burger {
     text-align: center;
 }
 
-li {
-    font-family: var(--ff-secondary);
-}
-
 label, button {
     font-family: var(--ff-primary);
 }
 
+.devour-button {
+    margin-block-start: 1em;
+    margin-left: 1em;
+}
+
+#menu {
+    background: url(notepad.png);
+    background-size: 20em;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2em 2.1em 6em 2em ;
+}
+
+#menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    font-family: var(--ff-secondary);
+    margin-top: -10px;
+    font-size: 1em;
+}
+
 #burger {
     font-family: var(--ff-secondary);
-    background-color: rgb(191, 191, 3);
+    background-color: var(--clr-accent);
     cursor: url(pencil.png), auto;
+    width: 12.5em;
+    height: 2em;
 }
 
 #add-burger {
