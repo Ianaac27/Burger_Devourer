@@ -36,7 +36,19 @@ console.log(id);
         }).then(
           () => {
             console.log("created new burger");
-            //reloads page and updates list
+            location.reload();
+          }
+        );
+      });
+
+    $(".delete-button").on("click", (event) => {
+        let id = $(this).data("id");
+        console.log(id);
+
+        $.ajax("/api/burgers/" + id, {
+          type: "DELETE"
+        }).then(()=> {
+            console.log("The burger has been removed", id);
             location.reload();
           }
         );
