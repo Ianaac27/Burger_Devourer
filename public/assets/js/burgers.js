@@ -1,4 +1,6 @@
 $(function() {
+
+  //Devour the food on the menu (update the boolean)
     $(".devour-button").on("click", function(event) {
         let id = $(this).data("id");
         let newDevour = $(this).data("newdevour");
@@ -21,6 +23,7 @@ console.log(id);
     );
     });
 
+  //Add new item to the menu
     $(".new-burger").on("submit", (event) => {
         event.preventDefault();
 
@@ -41,13 +44,14 @@ console.log(id);
         );
       });
 
-    $(".delete-button").on("click", (event) => {
+  //Delete item from the belly
+    $(".delete-button").on("click", function(event) {
         let id = $(this).data("id");
         console.log(id);
 
         $.ajax("/api/burgers/" + id, {
           type: "DELETE"
-        }).then(()=> {
+        }).then(function() {
             console.log("The burger has been removed", id);
             location.reload();
           }
