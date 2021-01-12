@@ -33,7 +33,17 @@ updateOne: function(table, value, id, cb) {
         cb(res);
     })
 
+},
+
+deleteOne: function(table, id, cb) {
+    let queryString = "DELETE FROM ?? WHERE id= " + id;
+    connection.query(queryString, [table,id], (err,res) => {
+        if (err) throw err;
+        console.log(queryString);
+        cb(res);
+    })
 }
+
 };
 
 module.exports = orm;

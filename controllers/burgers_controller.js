@@ -31,7 +31,6 @@ router.put("/api/burgers/:id", (req, res) => {
     console.log(req.body);
     console.log(req.body.devoured);
     
-    // var devourString = JSON.stringify(req.body)
     burger.updateOne([
         req.body.devoured 
     ], id, function(result) {
