@@ -84,7 +84,7 @@ label, button {
     background-repeat: no-repeat;
     background-position: center;
     padding: 4.5em 2.1em 6em 2em;
-    margin-top: -3em;
+    margin-top: -1em;
 }
 
 #menu-list {
@@ -104,7 +104,7 @@ li {
     background-color: var(--clr-grey);
     background-size: 20em;
     background-position: center;
-    padding: 4.5em 2.1em 6em 2em;
+    padding: 3em 2.1em 3em 2em;
     /* margin-top: -0.5em; */
     border: var(--clr-dark);
     border-radius: 1em;
@@ -120,6 +120,7 @@ li {
 
 #belly-list li {
     color: white;
+    margin-top: 10px;
 }
 
 /* Footer section section */
@@ -128,6 +129,7 @@ footer {
     box-shadow: 0px 2px 13px var(--clr-dark);
     padding-bottom: 4em;
     padding-top: .5px;
+    margin-top: 1.5em;
 }
 
 #burger {

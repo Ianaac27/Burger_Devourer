@@ -1,7 +1,7 @@
 $(function() {
     $(".devour-button").on("click", function(event) {
-        var id = $(this).data("id");
-        var newDevour = $(this).data("newdevour");
+        let id = $(this).data("id");
+        let newDevour = $(this).data("newdevour");
 
 console.log(id);
 
@@ -24,13 +24,12 @@ console.log(id);
     $(".new-burger").on("submit", (event) => {
         event.preventDefault();
 
-        var newBurger = {
+        let newBurger = {
           name: $("#burger").val().trim(),
         };
     
         console.log(newBurger);
 
-        // Send the POST request
         $.ajax("/api/burgers", {
           type: "POST",
           data: newBurger
