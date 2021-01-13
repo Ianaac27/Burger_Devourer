@@ -1,0 +1,39 @@
+# Burger_Devourer
+## Description
+
+The Burger Devourer is a fun application that displays my knowledge in MVC and how to provide the user with the ability to view the content, create something new within the content, update, and finally, delete. This is done through the Node.js server while using the npm packages Express, Handlebars, and MySQL. 
+With Node and Express, I am able to connect MySQL workbench so I could have a running database. With this, I able able to configure this data through ORM and Model files of my application. This information would then be passed through the Controller and onto the Views file which contains the content to display the application and to provide the functions listed above to the user. The main webpage is generated through Handlebars. Once the user inputs their information, it will then pass through to the Controller, and back down to the MySQL database for any database modofications.
+
+## Table of Contents
+
+* [License](#license)
+* [Contributing](#contributing)
+* [Screenshots](#screenshots)
+* [Link](#link)
+* [Questions](#questions)
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+MIT
+
+## Contributing
+
+Ianaac27
+
+# Screenshots
+Here are mocks of the Note Taker.
+
+![Burger_Devourer](public/assets/screenshot/screenshot.png)
+
+# Link
+Take a look at the live version through Heroku [here.](https://burger-devourer-mvc.herokuapp.com/)
+
+## Questions
+
+If you have any questions, please refer to my contact information below.
+
+[GitHub: Ianaac27](https://www.github.com/Ianaac27)
+
+Email: ian.fleshmancooper@gmail.com
