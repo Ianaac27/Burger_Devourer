@@ -8,7 +8,7 @@ With Node and Express, I am able to connect MySQL workbench so I could have a ru
 
 * [License](#license)
 * [Contributing](#contributing)
-* [Screenshots](#screenshots)
+* [Screenshot](#screenshot)
 * [Link](#link)
 * [Questions](#questions)
 
@@ -22,8 +22,8 @@ MIT
 
 Ianaac27
 
-# Screenshots
-Here are mocks of the Note Taker.
+# Screenshot
+Here is a mock of the Burger Devourer.
 
 ![Burger_Devourer](public/assets/screenshot/screenshot.png)
 
